@@ -1,0 +1,36 @@
+{
+  "name": "adobe-analytics",
+  "description": "Adobe Analytics API Module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kauegimenes/adobeanalytics.git"
+  },
+  "version": "0.0.1",
+  "author": {
+    "name": "Kauê Gimenes",
+    "email": "kaue@dot.net",
+    "url": "http://github.com/kauegimenes"
+  },
+  "main": "./index",
+  "directories": {
+    "lib": "./lib"
+  },
+  "keywords": [
+    "omniture",
+    "sitecatalyst",
+    "site catalyst",
+    "adobe",
+    "analytics"
+  ],
+  "dependencies": {
+    "nodeunit": "^0.9.1",
+    "request": "^2.65.0",
+    "underscore": "^1.8.3",
+    "xml2js": "^0.4.15"
+  },
+  "bundledDependencies": [
+    "nodeunit",
+    "underscore",
+    "xml2json"
+  ]
+}
