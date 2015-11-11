@@ -78,5 +78,5 @@ If the response is a string or a number as it is for "Company.GetTokenCount", th
     });
 
 ## Credits
-Fork from [adobe-analytics module](https://github.com/imartingraham/adobe-analytics)
+Fork from [nomniture module](https://github.com/imartingraham/nomniture)
 This is a Node.js port of [ROmniture](https://github.com/msukmanowsky/ROmniture) by [msukmanowsky](https://github.com/msukmanowsky).
