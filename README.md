@@ -1,7 +1,7 @@
 # adobe-analytics
 
 ## What is it
-nomniture is a minimal Node.js module wrapper for [Omniture's REST API](http://developer.omniture.com).
+adobe-analytics is a minimal Node.js module wrapper for [Omniture's REST API](http://developer.omniture.com).
 
 There are two objects to use, `Client` and `Report`.  `Client` is the generic interface to the Omniture API.  `Report` adds a few helper methods to handle requesting a report and polling the Omniture API until the report is ready.  It then requests the report and returns the data.
 
@@ -11,7 +11,7 @@ Omniture's API is closed, you have to be a paying customer in order to access th
     [sudo] npm install adobe-analytics
 
 ## Initialization and Authentication
-nomniture requires you supply the `username`, `sharedSecret` and `environment` which you can access within the Company > Web Services section of the Admin Console.  The environment you'll use to connect to Omniture's API depends on which data center they're using to store your traffic data and will be one of:
+adobe-analytics requires you supply the `username`, `sharedSecret` and `environment` which you can access within the Company > Web Services section of the Admin Console.  The environment you'll use to connect to Omniture's API depends on which data center they're using to store your traffic data and will be one of:
 
 * San Jose (https://api.omniture.com/admin/1.2/rest/)
 * Dallas (https://api2.omniture.com/admin/1.2/rest/)
@@ -23,11 +23,11 @@ nomniture requires you supply the `username`, `sharedSecret` and `environment` w
 Here's an example of initializing with a few configuration options.
 
       // generic Client
-      var Client = require('nomniture').Client;
+      var Client = require('adobe-analytics').Client;
       var c = new Client(username, sharedSecret, 'sanJose');
 
       // Report
-      var Report = require('nomniture').Report;
+      var Report = require('adobe-analytics').Report;
       var r = new Report(username, sharedSecret, 'sanJose', {waitTime : 10}); // waitTime is optional, default is set to 5 seconds
 
 
@@ -46,7 +46,7 @@ If the response is a string or a number as it is for "Company.GetTokenCount", th
 
 ## Examples
     // Get all available metrics using the Client object
-    var Client = require('nomniture').Client,
+    var Client = require('adobe-analytics').Client,
         c = new Client(username, sharedSecret, 'sanJose'),
         reportData = { "rsid_list": ["reportSuiteId"] }
 
@@ -56,7 +56,7 @@ If the response is a string or a number as it is for "Company.GetTokenCount", th
     });
 
     // Use the Report object to get a pageView Overtime report
-    var Report = require('nomniture').Report,
+    var Report = require('adobe-analytics').Report,
         option = {
           waitTime: 10, // optionally set the wait time between polling API
           log: true // default is false
@@ -78,4 +78,5 @@ If the response is a string or a number as it is for "Company.GetTokenCount", th
     });
 
 ## Credits
+Fork from [adobe-analytics module](https://github.com/imartingraham/adobe-analytics)
 This is a Node.js port of [ROmniture](https://github.com/msukmanowsky/ROmniture) by [msukmanowsky](https://github.com/msukmanowsky).
